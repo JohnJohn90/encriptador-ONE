@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img class="header_logo"  src="./assets/logo.svg" alt="logo alura">            
+        </div>
+    </header>
+
+    <main>
+        <div class="main">
+            <div class="left">
+                <textarea class="ingreso_texto" id="ingresoTexto" placeholder="Ingrese el texto aqui" ></textarea>
+
+                <div class="left_footer">
+                    <img src="./assets/Vector.png" alt="iconode exclamacion">
+                    <span class="left_info" >Solo letras minúsculas y sin acentos</span>
+                    
+                    <div class="left_botones">
+                        <button class="boton_encriptar" id="botonEncriptar" >Encriptar</button>
+                        <button class="boton_desencriptar" id="botonDesencriptar" >Desencriptar</button>
+                    </div>
+
+                </div> 
+
+            </div>
+
+            <div class="right" id="right" >
+                <img class="muñeco" src="./assets/Muñeco.png" alt="imagen">
+
+                <!-- <div class="texto_informativo"> -->
+                    <textarea class="mensaje_final"  id="mensajeFinal" placeholder="Ningún mensaje fue encontrado" ></textarea>
+                    <p class="texto_info" >Ingresa el texto que desees encriptar o desencriptar.</p>
+                <!-- </div>  -->
+
+                <button class="boton_copiar" id="botonCopiar" >Copiar</button>
+            </div>
+        </div>
+   </main>
+
+   <!-- <footer>
+   </footer> -->
+   <script src="script.js" ></script>
+</body>
+</html>
