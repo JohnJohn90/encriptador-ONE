@@ -45,8 +45,9 @@ const reset = () => {
 
 botonEncriptar.addEventListener("click", () => {
     const texto = ingresoTexto.value.toLowerCase();
+    let txt = texto.normalize('NFD').replace(/[$\.¿\?~!\¡@#%^&*()_|}\{[\]>\<:"`;,\u0300-\u036f']/g, " " );
     
-    if (texto != "") {
+    if (txt != "") {
         function encriptar(textoUsuario) {
             for (let i = 0; i < reemplazar.length; i++) {
                 if (textoUsuario.includes(reemplazar[i][0])) {
@@ -55,7 +56,7 @@ botonEncriptar.addEventListener("click", () => {
             }
             return textoUsuario;
         }
-        reajuste(encriptar(texto));
+        reajuste(encriptar(txt));
     } else {
         alert("Ingrese texto a encriptar");
         reset();
@@ -64,8 +65,9 @@ botonEncriptar.addEventListener("click", () => {
 
 botonDesencriptar.addEventListener("click", () => {
     const texto = ingresoTexto.value.toLowerCase();
+    let txt = texto.normalize('NFD').replace(/[$\.¿\?~!\¡@#%^&*()_|}\{[\]>\<:"`;,\u0300-\u036f']/g, " " );
     
-    if (texto != "") {
+    if (txt != "") {
         function desencriptar(textoUsuario) {
             for (let i = 0; i < reemplazar.length; i++) {
                 if (textoUsuario.includes(reemplazar[i][1])) {
@@ -74,7 +76,7 @@ botonDesencriptar.addEventListener("click", () => {
             }
             return textoUsuario;
         }
-        reajuste(desencriptar(texto));
+        reajuste(desencriptar(txt));
     } else {
         alert("Ingrese texto a desencriptar");
         reset();
