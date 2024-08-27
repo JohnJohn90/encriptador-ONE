@@ -68,7 +68,6 @@ margin-top: 40px;
     display: flex;
     gap: 24px;
     margin-top: 16px;
-    /* flex-wrap: wrap; */
     }
 
 .boton_encriptar,
@@ -83,10 +82,15 @@ margin-top: 40px;
     border-radius: 24px;
     font-size: 1rem;
 }    
+
    
 .boton_encriptar {  
     color: white;
     background: var(--azul);
+}
+
+.boton_encriptar:hover {
+    background: #072346;
 }
 
 .boton_desencriptar{
@@ -94,8 +98,16 @@ margin-top: 40px;
     background: var(--gray);
 }
 
+.boton_desencriptar:hover {
+    background: #b3bdcb;
+}
+
 .boton_desencriptar.transparente{
     background: transparent;
+}
+
+.boton_desencriptar.transparente:hover {
+    background: rgb(228, 225, 225);
 }
 
 .right{
@@ -156,6 +168,10 @@ margin-top: 40px;
     color: var(--azul);
     background: transparent;
     display: none;
+}
+
+.boton_copiar:hover {
+    background: rgb(243, 239, 239);
 }
 
 
