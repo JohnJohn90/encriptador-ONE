@@ -101,6 +101,6 @@ botonCopiar.addEventListener("click", () => {
     // navigator.clipboard.writeText(mensajeFinal.value);
     mensajeFinal.select();
     document.execCommand('copy');
-    swal("Genial!", "Mensaje Copiado", "warning");
+    swal("Genial!", "Mensaje Copiado", "success");
     reset();
 })
